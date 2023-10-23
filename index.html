@@ -60,6 +60,7 @@
         #products .containProducts {
             padding: 30px;
         }
+
         #products .heading h1 {
             /* border: 2px solid goldenrod; */
             background: rgb(245 245 245);
@@ -85,7 +86,7 @@
             background: #fbfbfb;
             border-radius: 13px;
             width: 28%;
-            height: 440px;
+            height: 570px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -95,9 +96,10 @@
         }
 
         /* contact form */
-        #contact{
+        #contact {
             background: #f3f3f3;
         }
+
         .containForm {
             /* border: 1px solid black; */
             width: 100vw;
@@ -150,69 +152,73 @@
 
         .btn {
             background: skyblue;
+            margin: 2px;
+        }
+
+        /* footer */
+        footer {
+            /* border: 3px solid purple; */
+            grid-area: footer;
+            width: 98.7vw;
+            height: 100%;
+            background: #101d31;
+            color: rgb(161, 159, 159);
 
         }
-/* footer */
-footer {
-        /* border: 3px solid purple; */
-        grid-area: footer;
-        width: 98.7vw;
-        height: 100%;
-        background: #101d31;
-        color: rgb(161, 159, 159);
 
-    }
+        footer .containFooter {
+            display: flex;
+            flex-direction: row;
+        }
 
-    footer .containFooter {
-        display: flex;
-        flex-direction: row;
-    }
+        footer .containFooter .footerItems {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+        }
 
-    footer .containFooter .footerItems {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 30%;
-    }
+        footer .containFooter .footerItems .footerLinks {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    footer .containFooter .footerItems .footerLinks {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+        footer .containFooter .v-line {
+            width: 2px;
+            height: 25rem;
+            background: rgb(197, 40, 158);
+        }
 
-    footer .containFooter .v-line {
-        width: 2px;
-        height: 25rem;
-        background: rgb(197, 40, 158);
-    }
-    footer .containFooter a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.5rem;
-        margin: 20px;
-        font-weight: bold;
-        transition: all .2s ease-in-out .1s;
-    }
+        footer .containFooter a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            margin: 20px;
+            font-weight: bold;
+            transition: all .2s ease-in-out .1s;
+        }
 
-    footer .containFooter a:hover {
-        color: rgb(59, 172, 224);
-        font-weight: bold;
-    }
+        footer .containFooter a:hover {
+            color: rgb(59, 172, 224);
+            font-weight: bold;
+        }
 
-    footer .containFooter p {
-        font-size: 1.3rem;
-        padding: 30px;
-    }
+        footer .containFooter p {
+            font-size: 1.3rem;
+            padding: 30px;
+        }
 
-    footer .containFooter .imgLogo {
-        height: 50px;
-        margin: 15px;
-    }
-    footer .containFooter .m {
-        margin: 10px;
-        text-align: center;
-    }
+        footer .containFooter .imgLogo {
+            height: 50px;
+            margin: 15px;
+        }
+
+        footer .containFooter .m {
+            margin: 10px;
+            text-align: center;
+        }
+
         /* utilities */
         span {
             color: #f9004d;
@@ -237,7 +243,7 @@ footer {
                         <a class="nav-link" href="#products">Products</a>
                     </li>
                     <li class="nav-item current">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#footer">About</a>
                     </li>
                     <li class="nav-item current">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -256,6 +262,7 @@ footer {
                     <div class="card-body">
                         <h1 class="card-title">Nike Cortez</h1>
                         <h1>UPTO <span>35%</span> OFF</h1>
+                        <button class="btn">Shop Now</button>
                         <p class="card-text"><small class="text-muted">-Shoes New Collection recommended By
                                 <span>Hamdan</span></small></p>
                     </div>
@@ -312,105 +319,149 @@ footer {
     <section id="products">
         <div class="containProducts">
             <div class="heading">
-            <h1><span>Hot</span> Deals</h1>
-        </div>
-        <div class="cards-group">
-            <div class="cards">
-                <img src="img/airPods.jpeg" alt="airPods">
-                <h2>Air Pods</h2>
-                <p>Enjoy wireless and superior sound quality with Apple AirPods, your perfect companion for music,calls
-                    and voice-activated assistance.</p>
-                <h5><span>For Just </span>$20</h5>
+                <h1><span>Hot</span> Deals</h1>
+            </div>
+            <div class="cards-group">
+                <div class="cards">
+                    <img src="img/airPods.jpeg" alt="airPods">
+                    <h2>Air Pods</h2>
+                    <p>Enjoy wireless and superior sound quality with Apple AirPods, your perfect companion for
+                        music,calls
+                        and voice-activated assistance.</p>
+                    <h5><span>For Just </span>$20</h5>
+                    <button class="btn">Shop Now</button>
+                    <button class="btn">Add to <span>Cart</span></button>
 
-            </div>
-            <div class="cards">
-                <img src="img/cricketBat.jpeg" alt="Bat">
-                <h2>Cricket Bat</h2>
-                <p>Experience unmatched power and precision with our high-quality SH English willow cricket bat designed
-                    for professional-level performance.</p>
-                <h5><span>For Just </span>$499</h5>
-            </div>
-            <div class="cards">
-                <img src="img/ps5.jpeg" alt="PS5">
-                <h2>Play Station</h2>
-                <p>Elevate your gaming experience with PS5 console,delivering stunning graphics,lightning-fast load
-                    times and immersive gameplay.</p>
-                <h5><span>For Just </span>$5000</h5>
-            </div>
-            <div class="cards">
-                <img src="img/airPods.jpeg" alt="airPods">
-                <h2>Air Pods</h2>
-                <p>Enjoy wireless and superior sound quality with Apple AirPods, your perfect companion for music,calls
-                    and voice-activated assistance.</p>
-                <h5><span>For Just </span>$20</h5>
+                </div>
+                <div class="cards">
+                    <img src="img/cricketBat.jpeg" alt="Bat">
+                    <h2>Cricket Bat</h2>
+                    <p>Experience unmatched power and precision with our high-quality SH English willow cricket bat
+                        designed
+                        for professional-level performance.</p>
+                    <h5><span>For Just </span>$499</h5>
+                    <button class="btn">Shop Now</button>
+                    <button class="btn">Add to <span>Cart</span></button>
+                </div>
+                <div class="cards">
+                    <img src="img/ps5.jpeg" alt="PS5">
+                    <h2>Play Station</h2>
+                    <p>Elevate your gaming experience with PS5 console,delivering stunning graphics,lightning-fast load
+                        times and immersive gameplay.</p>
+                    <h5><span>For Just </span>$5000</h5>
+                    <button class="btn">Shop Now</button>
+                    <button class="btn">Add to <span>Cart</span></button>
 
+                </div>
+                <div class="cards">
+                    <img src="img/airPods.jpeg" alt="airPods">
+                    <h2>Air Pods</h2>
+                    <p>Enjoy wireless and superior sound quality with Apple AirPods, your perfect companion for
+                        music,calls
+                        and voice-activated assistance.</p>
+                    <h5><span>For Just </span>$20</h5>
+                    <button class="btn">Shop Now</button>
+                    <button class="btn">Add to <span>Cart</span></button>
+
+
+                </div>
+                <div class="cards">
+                    <img src="img/cricketBat.jpeg" alt="Bat">
+                    <h2>Cricket Bat</h2>
+                    <p>Experience unmatched power and precision with our high-quality SH English willow cricket bat
+                        designed
+                        for professional-level performance.</p>
+                    <h5><span>For Just </span>$499</h5>
+                    <button class="btn">Shop Now</button>
+                    <button class="btn">Add to <span>Cart</span></button>
+
+                </div>
+                <div class="cards">
+                    <img src="img/ps5.jpeg" alt="PS5">
+                    <h2>Play Station</h2>
+                    <p>Elevate your gaming experience with PS5 console,delivering stunning graphics,lightning-fast load
+                        times and immersive gameplay.</p>
+                    <h5><span>For Just </span>$5000</h5>
+                    <button class="btn">Shop Now</button>
+                    <button class="btn">Add to <span>Cart</span></button>
+
+                </div>
             </div>
-            <div class="cards">
-                <img src="img/cricketBat.jpeg" alt="Bat">
-                <h2>Cricket Bat</h2>
-                <p>Experience unmatched power and precision with our high-quality SH English willow cricket bat designed
-                    for professional-level performance.</p>
-                <h5><span>For Just </span>$499</h5>
-            </div>
-            <div class="cards">
-                <img src="img/ps5.jpeg" alt="PS5">
-                <h2>Play Station</h2>
-                <p>Elevate your gaming experience with PS5 console,delivering stunning graphics,lightning-fast load
-                    times and immersive gameplay.</p>
-                <h5><span>For Just </span>$5000</h5>
-            </div>
-        </div>
         </div>
         <div class="containProducts">
             <div class="heading">
-            <h1><span>Flash</span> Deals</h1>
-        </div>
-        <div class="cards-group">
-            <div class="cards">
-                <img src="img/airPods.jpeg" alt="airPods">
-                <h2>Air Pods</h2>
-                <p>Enjoy wireless and superior sound quality with Apple AirPods, your perfect companion for music,calls
-                    and voice-activated assistance.</p>
-                <h5><span>For Just </span>$20</h5>
+                <h1><span>Flash</span> Deals</h1>
+            </div>
+            <div class="cards-group">
+                <div class="cards">
+                    <img src="img/airPods.jpeg" alt="airPods">
+                    <h2>Air Pods</h2>
+                    <p>Enjoy wireless and superior sound quality with Apple AirPods, your perfect companion for
+                        music,calls
+                        and voice-activated assistance.</p>
+                    <h5><span>For Just </span>$20</h5>
+                    <button class="btn">Shop Now</button>
+                    <button class="btn">Add to <span>Cart</span></button>
 
-            </div>
-            <div class="cards">
-                <img src="img/cricketBat.jpeg" alt="Bat">
-                <h2>Cricket Bat</h2>
-                <p>Experience unmatched power and precision with our high-quality SH English willow cricket bat designed
-                    for professional-level performance.</p>
-                <h5><span>For Just </span>$499</h5>
-            </div>
-            <div class="cards">
-                <img src="img/ps5.jpeg" alt="PS5">
-                <h2>Play Station</h2>
-                <p>Elevate your gaming experience with PS5 console,delivering stunning graphics,lightning-fast load
-                    times and immersive gameplay.</p>
-                <h5><span>For Just </span>$5000</h5>
-            </div>
-            <div class="cards">
-                <img src="img/airPods.jpeg" alt="airPods">
-                <h2>Air Pods</h2>
-                <p>Enjoy wireless and superior sound quality with Apple AirPods, your perfect companion for music,calls
-                    and voice-activated assistance.</p>
-                <h5><span>For Just </span>$20</h5>
 
+                </div>
+                <div class="cards">
+                    <img src="img/cricketBat.jpeg" alt="Bat">
+                    <h2>Cricket Bat</h2>
+                    <p>Experience unmatched power and precision with our high-quality SH English willow cricket bat
+                        designed
+                        for professional-level performance.</p>
+                    <h5><span>For Just </span>$499</h5>
+                    <button class="btn">Shop Now</button>
+                    <button class="btn">Add to <span>Cart</span></button>
+
+                </div>
+                <div class="cards">
+                    <img src="img/ps5.jpeg" alt="PS5">
+                    <h2>Play Station</h2>
+                    <p>Elevate your gaming experience with PS5 console,delivering stunning graphics,lightning-fast load
+                        times and immersive gameplay.</p>
+                    <h5><span>For Just </span>$5000</h5>
+                    <button class="btn">Shop Now</button>
+                    <button class="btn">Add to <span>Cart</span></button>
+
+                </div>
+                <div class="cards">
+                    <img src="img/airPods.jpeg" alt="airPods">
+                    <h2>Air Pods</h2>
+                    <p>Enjoy wireless and superior sound quality with Apple AirPods, your perfect companion for
+                        music,calls
+                        and voice-activated assistance.</p>
+                    <h5><span>For Just </span>$20</h5>
+                    <button class="btn">Shop Now</button>
+                    <button class="btn">Add to <span>Cart</span></button>
+
+
+                </div>
+                <div class="cards">
+                    <img src="img/cricketBat.jpeg" alt="Bat">
+                    <h2>Cricket Bat</h2>
+                    <p>Experience unmatched power and precision with our high-quality SH English willow cricket bat
+                        designed
+                        for professional-level performance.</p>
+                    <h5><span>For Just </span>$499</h5>
+                    <button class="btn">Shop Now</button>
+                    <button class="btn">Add to <span>Cart</span></button>
+
+
+                </div>
+                <div class="cards">
+                    <img src="img/ps5.jpeg" alt="PS5">
+                    <h2>Play Station</h2>
+                    <p>Elevate your gaming experience with PS5 console,delivering stunning graphics,lightning-fast load
+                        times and immersive gameplay.</p>
+                    <h5><span>For Just </span>$5000</h5>
+                    <button class="btn">Shop Now</button>
+                    <button class="btn">Add to <span>Cart</span></button>
+
+
+                </div>
             </div>
-            <div class="cards">
-                <img src="img/cricketBat.jpeg" alt="Bat">
-                <h2>Cricket Bat</h2>
-                <p>Experience unmatched power and precision with our high-quality SH English willow cricket bat designed
-                    for professional-level performance.</p>
-                <h5><span>For Just </span>$499</h5>
-            </div>
-            <div class="cards">
-                <img src="img/ps5.jpeg" alt="PS5">
-                <h2>Play Station</h2>
-                <p>Elevate your gaming experience with PS5 console,delivering stunning graphics,lightning-fast load
-                    times and immersive gameplay.</p>
-                <h5><span>For Just </span>$5000</h5>
-            </div>
-        </div>
         </div>
     </section>
 
