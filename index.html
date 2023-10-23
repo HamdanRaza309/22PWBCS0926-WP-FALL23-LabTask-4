@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        * {
+            padding: 1px;
+            margin: 0;
+        }
+
+        body {
+            overflow-x: hidden;
+            padding: 3px;
+        }
+
+        #header #navbarNav .navbar-nav .nav-item .nav-link:active {
+            color: #f1adc2;
+            font-size: 20px;
+        }
+
+        #home {
+            /* border: 2px solid red; */
+            background: #f5f5f5;
+            height: 100%;
+            width: 100%;
+        }
+
+        #home .card:first-child {
+            background: #fcfcfc;
+            width: 100%;
+            height: 70vh;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #home .services .card {
+            justify-content: center;
+            align-items: center;
+        }
+
+        #home .services .card img {
+            height: 90px;
+            width: 90px;
+        }
+
+        #products {
+            /* border: 2px solid blue; */
+            padding: 10px;
+            width: 100%;
+            height: 130%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #products .containProducts {
+            padding: 30px;
+        }
+        #products .heading h1 {
+            /* border: 2px solid goldenrod; */
+            background: rgb(245 245 245);
+            font-family: monospace;
+            font-size: 3rem;
+            font-weight: bold;
+            padding: 20px;
+        }
+
+        #products .cards-group {
+            /* border: 2px solid rgb(209, 209, 209); */
+            background: rgb(245 245 245);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        #products .cards-group .cards {
+            border: 2px solid #ebebeb;
+            background: #fbfbfb;
+            border-radius: 13px;
+            width: 28%;
+            height: 440px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* contact form */
+        #contact{
+            background: #f3f3f3;
+        }
+        .containForm {
+            /* border: 1px solid black; */
+            width: 100vw;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .containForm .form-group {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0px 10px 0px;
+        }
+
+        .containForm .form-group .form-control {
+            cursor: pointer;
+        }
+
+        .containForm .form-check {
+            margin: 30px 0px 30px 0px;
+        }
+
+        .containForm .form-check .form-check-input {
+            cursor: pointer;
+        }
+
+        .containForm .form-check textArea {
+            width: 40vw;
+            border: 2px solid black;
+        }
+
+        .form-check-label {
+            font-size: 1rem;
+        }
+
+        .containForm .form-group input {
+            height: 20px;
+            width: 40vw;
+            border-radius: 4px;
+            padding: 4px;
+        }
+
+        .containForm .form-group small {
+            font-size: 11px;
+            margin: 0px 0px 0px 5px;
+        }
+
+        .btn {
+            background: skyblue;
+
+        }
+/* footer */
+footer {
+        /* border: 3px solid purple; */
+        grid-area: footer;
+        width: 98.7vw;
+        height: 100%;
+        background: #101d31;
+        color: rgb(161, 159, 159);
+
+    }
+
+    footer .containFooter {
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer .containFooter .footerItems {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+    }
+
+    footer .containFooter .footerItems .footerLinks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .containFooter .v-line {
+        width: 2px;
+        height: 25rem;
+        background: rgb(197, 40, 158);
+    }
+    footer .containFooter a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+        margin: 20px;
+        font-weight: bold;
+        transition: all .2s ease-in-out .1s;
+    }
+
+    footer .containFooter a:hover {
+        color: rgb(59, 172, 224);
+        font-weight: bold;
+    }
+
+    footer .containFooter p {
+        font-size: 1.3rem;
+        padding: 30px;
+    }
+
+    footer .containFooter .imgLogo {
+        height: 50px;
+        margin: 15px;
+    }
+    footer .containFooter .m {
+        margin: 10px;
+        text-align: center;
+    }
+        /* utilities */
+        span {
+            color: #f9004d;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+            <a class="navbar-brand form-control-lg" href="#">L<span>O</span>GO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item current">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item current">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item current">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item current">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <section id="home">
+        <div class="card mb-3">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="img/blueShoesMain.jpeg" alt="shoes">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h1 class="card-title">Nike Cortez</h1>
+                        <h1>UPTO <span>35%</span> OFF</h1>
+                        <p class="card-text"><small class="text-muted">-Shoes New Collection recommended By
+                                <span>Hamdan</span></small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="services">
+            <div class="row row-cols-1 row-cols-md-3" style="justify-content: center;">
+                <div class="col mb-4">
+                    <div class="card h-100">
+                        <img src="img/delivery-logo.svg" class="card-img-top" alt="delivery-logo">
+                        <div class="card-body">
+                            <h5 class="card-title">Free Delivery</h5>
+                            <p class="card-text">Experience the convenience of free delivery on all our products. No
+                                hidden fees, just quality items delivered to your doorstep at no extra cost.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card h-100">
+                        <img src="img/onlineSupport-logo.png" class="card-img-top" alt="onlineSupport-logo">
+                        <div class="card-body">
+                            <h5 class="card-title">24/7 Online Support</h5>
+                            <p class="card-text">We're here to help 24/7! Our dedicated support team is always ready to
+                                assist you with any questions or concerns.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card h-100">
+                        <img src="img/90DaysReturn-logo.jpeg" class="card-img-top" alt="90DaysReturn-logo">
+                        <div class="card-body">
+                            <h5 class="card-title">Return Policy</h5>
+                            <p class="card-text">Enjoy peace of mind with our generous 90-day return policy. If you're
+                                not completely satisfied, simply return your purchase within 90 days for a full refund
+                                or exchange.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card h-100">
+                        <img src="img/securePayment-logo.png" class="card-img-top" alt="securePayment-logo">
+                        <div class="card-body">
+                            <h5 class="card-title">Secure Payment</h5>
+                            <p class="card-text">Your security is paramount to us. We offer secure payment options to
+                                protect your financial information and ensure worry-free transactions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="containProducts">
+            <div class="heading">
+            <h1><span>Hot</span> Deals</h1>
+        </div>
+        <div class="cards-group">
+            <div class="cards">
+                <img src="img/airPods.jpeg" alt="airPods">
+                <h2>Air Pods</h2>
+                <p>Enjoy wireless and superior sound quality with Apple AirPods, your perfect companion for music,calls
+                    and voice-activated assistance.</p>
+                <h5><span>For Just </span>$20</h5>
+
+            </div>
+            <div class="cards">
+                <img src="img/cricketBat.jpeg" alt="Bat">
+                <h2>Cricket Bat</h2>
+                <p>Experience unmatched power and precision with our high-quality SH English willow cricket bat designed
+                    for professional-level performance.</p>
+                <h5><span>For Just </span>$499</h5>
+            </div>
+            <div class="cards">
+                <img src="img/ps5.jpeg" alt="PS5">
+                <h2>Play Station</h2>
+                <p>Elevate your gaming experience with PS5 console,delivering stunning graphics,lightning-fast load
+                    times and immersive gameplay.</p>
+                <h5><span>For Just </span>$5000</h5>
+            </div>
+            <div class="cards">
+                <img src="img/airPods.jpeg" alt="airPods">
+                <h2>Air Pods</h2>
+                <p>Enjoy wireless and superior sound quality with Apple AirPods, your perfect companion for music,calls
+                    and voice-activated assistance.</p>
+                <h5><span>For Just </span>$20</h5>
+
+            </div>
+            <div class="cards">
+                <img src="img/cricketBat.jpeg" alt="Bat">
+                <h2>Cricket Bat</h2>
+                <p>Experience unmatched power and precision with our high-quality SH English willow cricket bat designed
+                    for professional-level performance.</p>
+                <h5><span>For Just </span>$499</h5>
+            </div>
+            <div class="cards">
+                <img src="img/ps5.jpeg" alt="PS5">
+                <h2>Play Station</h2>
+                <p>Elevate your gaming experience with PS5 console,delivering stunning graphics,lightning-fast load
+                    times and immersive gameplay.</p>
+                <h5><span>For Just </span>$5000</h5>
+            </div>
+        </div>
+        </div>
+        <div class="containProducts">
+            <div class="heading">
+            <h1><span>Flash</span> Deals</h1>
+        </div>
+        <div class="cards-group">
+            <div class="cards">
+                <img src="img/airPods.jpeg" alt="airPods">
+                <h2>Air Pods</h2>
+                <p>Enjoy wireless and superior sound quality with Apple AirPods, your perfect companion for music,calls
+                    and voice-activated assistance.</p>
+                <h5><span>For Just </span>$20</h5>
+
+            </div>
+            <div class="cards">
+                <img src="img/cricketBat.jpeg" alt="Bat">
+                <h2>Cricket Bat</h2>
+                <p>Experience unmatched power and precision with our high-quality SH English willow cricket bat designed
+                    for professional-level performance.</p>
+                <h5><span>For Just </span>$499</h5>
+            </div>
+            <div class="cards">
+                <img src="img/ps5.jpeg" alt="PS5">
+                <h2>Play Station</h2>
+                <p>Elevate your gaming experience with PS5 console,delivering stunning graphics,lightning-fast load
+                    times and immersive gameplay.</p>
+                <h5><span>For Just </span>$5000</h5>
+            </div>
+            <div class="cards">
+                <img src="img/airPods.jpeg" alt="airPods">
+                <h2>Air Pods</h2>
+                <p>Enjoy wireless and superior sound quality with Apple AirPods, your perfect companion for music,calls
+                    and voice-activated assistance.</p>
+                <h5><span>For Just </span>$20</h5>
+
+            </div>
+            <div class="cards">
+                <img src="img/cricketBat.jpeg" alt="Bat">
+                <h2>Cricket Bat</h2>
+                <p>Experience unmatched power and precision with our high-quality SH English willow cricket bat designed
+                    for professional-level performance.</p>
+                <h5><span>For Just </span>$499</h5>
+            </div>
+            <div class="cards">
+                <img src="img/ps5.jpeg" alt="PS5">
+                <h2>Play Station</h2>
+                <p>Elevate your gaming experience with PS5 console,delivering stunning graphics,lightning-fast load
+                    times and immersive gameplay.</p>
+                <h5><span>For Just </span>$5000</h5>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="containForm">
+            <div class="hamdan"></div>
+            <h1>Contact <span>Form</span></h1>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="number">Subject</label>
+                    <input type="number" class="form-control" id="number">
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label" for="moreInfo">More Information</label>
+                    <textarea name="moreInfo" id="textArea" class="form-control" rows="10"></textarea>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+    <section id="footer">
+        <!-- footer -->
+        <footer>
+            <div class="containFooter">
+                <div class="footerItems m">
+                    <h2>Stay in Touch</h2>
+                    <div class="m">
+                        <a href="https://instagram.com/"><img src="img/instagramLogo.svg" alt="instaIcon"
+                                class="imgLogo"></a>
+                        <a href="mailto:hamdanraza309@gmail.com"><img src="img/mailLogo.svg" alt="EmailIcon"
+                                class="imgLogo"></a>
+                        <a href="https://facebook.com"><img src="img/facebookLogo.svg" alt="facebookIcon"
+                                class="imgLogo"></a>
+                        <a href="https://github.com/HamdanRaza309"><img src="img/githubIcon.svg" alt="githubIcon"
+                                class="imgLogo"></a>
+                        <a href="https://pk.linkedin.com/"><img src="img/linkedinIcon.svg" alt="linkedinIcon"
+                                class="imgLogo"></a>
+                    </div>
+                </div>
+                <div class="v-line m"></div>
+                <div class="footerItems m">
+                    <h2>About</h2>
+                    <div>
+                        <p>Paradise Travels is your gateway to extraordinary journeys around the world. We are more than
+                            just a travel agency; we are your adventure partners, your culture explorers, and your
+                            memory-makers. With a passion for travel and a commitment to excellence, we curate
+                            unforgettable
+                            experiences that leave a lasting imprint</p>
+                    </div>
+                </div>
+                <div class="v-line m"></div>
+                <div class="footerItems m">
+                    <h2>Visit To</h2>
+                    <div class="footerLinks">
+                        <a href="index.html">Home</a>
+                        <a href="stories.html">Stories</a>
+                        <a href="destinations.html">Destinations</a>
+                        <a href="photos.html">Photos</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
